@@ -1,32 +1,22 @@
 //alert("JavaScript works!");
 
 // Nest any data type in an object
-/*var student = { 
-	id : "0000032",
-	name: "Mike",
-	interests: [
-		"JavaScript", 
-		"HTML", 
-		"CSS", 
-		"Flash"
-	], 
-	age: 503423, 						//Property: Value stored inside of an object.
-	sayHi: function () {				//Method: Function stored inside of an object.
-		console.log ("Hello");
-	}
+/*function obj (name){
+	return { 
+		teamNames: [
+			"JavaScript", 
+			"HTML", 
+			"CSS", 
+			"Flash"
+		],
+	};
+	while (teamNames.length > 0) {
+		console.log("Picked up ");
+	peopleLeft = peopleLeft-1;
+	};
 };
-var name = "name";
 
-student.sayHi();
-
-student.sayHi = function (){
-	console.log (student[name] );
-};
-student.sayHi();
-
-for (var key in student) {
-	console.log("My " + key + " is " + student[key]);
-};*/
+obj();*/
 
 //JSON data
 var league =  {
@@ -82,15 +72,16 @@ function leagueTeams (teamInfo) {
 
 leagueTeams (league.teams);
 
-//--- New Function
+//--- String Function
 
+function draftPlayers(string){
+	var needToDraft;
+	needToDraft = string;
+	return needToDraft;
+};		
 
-
-
-
-
-
-
+var draft = draftPlayers("Now each team needs to draft players for their roster.");
+console.log (draft);
 
 
 
