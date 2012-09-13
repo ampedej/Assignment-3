@@ -122,3 +122,13 @@ var tom = addedTeams ("Tom");
 tom.newTeamName.push ("Head Cracker");
 tom.teamNameList();
 
+//---Procedure Function
+
+function allowToJoin(totalTeams){
+	if (totalTeams%2 == 0) {
+		console.log ("New teams have been added to our league.");
+	} else {
+		console.log ("Tom needs to find another player to make the teams even.");
+	};
+};
+allowToJoin(5);
