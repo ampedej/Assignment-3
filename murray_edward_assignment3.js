@@ -1,24 +1,5 @@
 //alert("JavaScript works!");
 
-// Nest any data type in an object
-/*function obj (name){
-	return { 
-		teamNames: [
-			"JavaScript", 
-			"HTML", 
-			"CSS", 
-			"Flash"
-		],
-	};
-	while (teamNames.length > 0) {
-		console.log("Picked up ");
-	peopleLeft = peopleLeft-1;
-	};
-};
-
-obj();*/
-
-//JSON data
 var league =  {
 	"teams": [
 		{
@@ -68,7 +49,9 @@ console.log (participation);
 
 //--- Array Function
 function leagueTeams (teamInfo) {
-	for (var i = 0; i < league.teams.length; i++){
+		var teams;
+		teams = teamInfo;
+	for (var i = 0; i < teams.length; i++){
 		// Set some scores.
 		var team = league.teams[i];
 			var s = 0,
@@ -80,6 +63,7 @@ function leagueTeams (teamInfo) {
 			team.teamScore  = score ;		
 				console.log (team.name + "'s team " + team.teamName + " is team number " + team.teamNumber + "."  + "They scored " + team.teamScore + " last game.") ;	
 	};
+	return teams;
 };
 
 leagueTeams (league.teams);
@@ -115,11 +99,19 @@ function winners (kyleScore, alexScore, edwardScore, frankScore){
 };
 winners (league.teams[0].teamScore, league.teams[1].teamScore, league.teams[2].teamScore, league.teams[3].teamScore);
 
+//---Object Function
 
-
-
-
-
+var addedTeams = function (newName){
+	var newTeamName	 = [];
+	var addNewTeamName = function (newTeamsName){
+		newTeamName.push(newTeamsName);
+	}
+	return{
+		"name": newName,
+		"newTeamName": newTeamName,
+		"addNewTeamName": addNewTeamName
+	};
+};
 
 
 
