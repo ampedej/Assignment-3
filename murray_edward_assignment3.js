@@ -23,7 +23,7 @@ var league =  {
 	"teams": [
 		{
 		"name":			"Kyle",
-		"teamName": 	"Steel City",
+		"teamName": 	"Steel City Squashers",
 		"teamNumber": 	1,
 		"teamScore":	0
 		},
@@ -94,6 +94,31 @@ function weekOne(string){
 
 var complete = weekOne("Week one is final. Let's see who won their matchups.");
 console.log (complete);
+
+// Number function
+function winners (kyleScore, alexScore, edwardScore, frankScore){
+	var teamsPlayed;
+		if (teamsPlayed = 4){
+			if 	(kyleScore > alexScore){
+				console.log (league.teams[0].teamName + " won his matchup against " + league.teams[1].teamName + ".");
+			} else {
+				console.log (league.teams[1].teamName + " won his matchup against " + league.teams[0].teamName + ".");
+			};
+				if 	(edwardScore > frankScore){
+					console.log (league.teams[2].teamName + " won his matchup against " + league.teams[3].teamName + ".");
+				} else {
+					console.log (league.teams[3].teamName + " won his matchup against " + league.teams[2].teamName + ".");
+				};
+		teamsPlayed = league.teams.length;
+		return teamsPlayed;
+		};
+};
+winners (league.teams[0].teamScore, league.teams[1].teamScore, league.teams[2].teamScore, league.teams[3].teamScore);
+
+
+
+
+
 
 
 
