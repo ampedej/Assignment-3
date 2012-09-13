@@ -101,17 +101,24 @@ winners (league.teams[0].teamScore, league.teams[1].teamScore, league.teams[2].t
 
 //---Object Function
 
-var addedTeams = function (newName){
+function addedTeams (newName){
 	var newTeamName	 = [];
 	var addNewTeamName = function (newTeamsName){
 		newTeamName.push(newTeamsName);
-	}
+	};
+	var teamNameList = function(){
+		for (var n = 0; n < newTeamName.length; n++) {
+			console.log(newName + "'s team: " + newTeamName[n] + " Wants to join our league.");
+		}
+	};
 	return{
 		"name": newName,
 		"newTeamName": newTeamName,
-		"addNewTeamName": addNewTeamName
+		"addNewTeamName": addNewTeamName,
+		"teamNameList": teamNameList
 	};
 };
-
-
+var tom = addedTeams ("Tom");
+tom.newTeamName.push ("Head Cracker");
+tom.teamNameList();
 
