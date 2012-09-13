@@ -24,22 +24,26 @@ var league =  {
 		{
 		"name":			"Kyle",
 		"teamName": 	"Steel City",
-		"teamNumber": 	1
+		"teamNumber": 	1,
+		"teamScore":	0
 		},
 		{
 		"name":			"Alex",
 		"teamName": 	"4th & Long",
-		"teamNumber": 	2
+		"teamNumber": 	2,
+		"teamScore":	0
 		},
 		{
 		"name":			"Edward",
 		"teamName": 	"What's your Forte",
-		"teamNumber":	3
+		"teamNumber":	3,
+		"teamScore":	50
 		},
 		{
 		"name":			"Frank",
 		"teamName": 	"Steel City",
-		"teamNumber": 	4
+		"teamNumber": 	4,
+		"teamScore":	0
 		}
 	],
 	"teamsCreated": true,
@@ -65,8 +69,16 @@ console.log (participation);
 //--- Array Function
 function leagueTeams (teamInfo) {
 	for (var i = 0; i < league.teams.length; i++){
+		// Set some scores.
 		var team = league.teams[i];
-		console.log (team.name + "'s team " + team.teamName + " is team number " + team.teamNumber + ".")	
+			var s = 0,
+				score  =0 ;
+				while(s<5) {
+					score += Math.floor((Math.random()*10)+1);
+					s ++ ;
+				}
+			team.teamScore  = score ;		
+				console.log (team.name + "'s team " + team.teamName + " is team number " + team.teamNumber + "."  + "They scored " + team.teamScore + " last game.") ;	
 	};
 };
 
@@ -74,16 +86,14 @@ leagueTeams (league.teams);
 
 //--- String Function
 
-function draftPlayers(string){
-	var needToDraft;
-	needToDraft = string;
-	return needToDraft;
+function weekOne(string){
+	var weekOneComplete;
+	weekOneComplete = string;
+	return weekOneComplete;
 };		
 
-var draft = draftPlayers("Now each team needs to draft players for their roster.");
-console.log (draft);
-
-
+var complete = weekOne("Week one is final. Let's see who won their matchups.");
+console.log (complete);
 
 
 
