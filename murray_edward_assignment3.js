@@ -1,4 +1,10 @@
 //alert("JavaScript works!");
+/*
+Edward M Murray Jr
+SDI 1209
+Project 3
+*/
+
 var league = {
     "teams": [{
         "name": "Kyle",
